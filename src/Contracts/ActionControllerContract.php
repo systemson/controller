@@ -1,6 +1,6 @@
 <?php
 
-namespace Amber\Controller\Base;
+namespace Amber\Controller\Contracts;
 
 interface ActionControllerInterface
 {
@@ -18,40 +18,40 @@ interface ActionControllerInterface
      *
      * @return string
      */
-    protected function getAbility();
+    protected function ability();
 
     /**
      * Gets the called action.
      *
      * @return string
      */
-    protected function getAction();
+    protected function action();
 
     /**
      * Gets the Request.
      *
      * @return string
      */
-    protected function getRequest();
+    protected function request();
 
     /**
      * Sets the Request.
      *
      * @return string
      */
-    protected function setRequest($request);
+    protected function setRequest($handler);
 
     /**
      * Returns the view handler.
      *
      * @return string
      */
-    protected function view($request);
+    protected function view();
 
     /**
      * Gets the view handler.
      *
      * @return string
      */
-    protected function getView($request);
+    protected function setView($handler);
 }

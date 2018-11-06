@@ -16,7 +16,7 @@ abstract class ActionController implements ActionControllerInterface
     protected $name;
 
     /**
-     * Model class.
+     * The model class.
      *
      * @var string
      */
