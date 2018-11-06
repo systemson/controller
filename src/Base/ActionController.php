@@ -2,10 +2,12 @@
 
 namespace Amber\Controller\Base;
 
+use Amber\Controller\Contracts\ActionControllerContract;
+
 /**
  *
  */
-abstract class ActionController implements ActionControllerInterface
+abstract class ActionController implements ActionControllerContract
 {
 
     /**
@@ -50,7 +52,7 @@ abstract class ActionController implements ActionControllerInterface
      *
      * @return array The controller's action map.
      */
-    protected function actionMap()
+    public function actionMap()
     {
         return $this->actionMap;
     }
@@ -60,7 +62,7 @@ abstract class ActionController implements ActionControllerInterface
      *
      * @return string|bool
      */
-    protected function getAbility()
+    public function getAbility()
     {
         if (isset($this->actionMap[$this->getAction()])) {
             return $this->actionMap[$this->getAction()];
@@ -74,7 +76,7 @@ abstract class ActionController implements ActionControllerInterface
      *
      * @return string
      */
-    protected function getAction()
+    public function getAction()
     {
         if (isset($this->actionMap[get_called_function()])) {
             return get_called_function();

@@ -2,7 +2,7 @@
 
 namespace Amber\Controller\Contracts;
 
-interface ActionControllerInterface
+interface ActionControllerContract
 {
     /**
      * Returns the map of resource methods to ability names.
@@ -11,47 +11,47 @@ interface ActionControllerInterface
      *
      * @return array The controller's action map.
      */
-    protected function actionMap();
+    public function actionMap();
 
     /**
      * Gets the ability for the called action.
      *
      * @return string
      */
-    protected function ability();
+    public function ability();
 
     /**
      * Gets the called action.
      *
      * @return string
      */
-    protected function action();
+    public function action();
 
     /**
      * Gets the Request.
      *
      * @return string
      */
-    protected function request();
+    public function request();
 
     /**
      * Sets the Request.
      *
      * @return string
      */
-    protected function setRequest($handler);
+    public function setRequest($handler);
 
     /**
      * Returns the view handler.
      *
      * @return string
      */
-    protected function view();
+    public function view();
 
     /**
      * Gets the view handler.
      *
      * @return string
      */
-    protected function setView($handler);
+    public function setView($handler);
 }
